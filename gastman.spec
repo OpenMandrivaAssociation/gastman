@@ -39,12 +39,12 @@ install -d %{buildroot}%{_liconsdir}
 install -m0755 gastman %{buildroot}%{_sbindir}/
 install -m0644 art/*.xpm %{buildroot}%{_datadir}/%{name}/icons/
 
-# Mandrake Icons
+# Mandriva Icons
 convert -size 48x48 art/phone2.xpm %{buildroot}%{_liconsdir}/%{name}.png
 convert -size 32x32 art/phone2.xpm %{buildroot}%{_iconsdir}/%{name}.png
 convert -size 16x16 art/phone2.xpm %{buildroot}%{_miconsdir}/%{name}.png
 
-# Mandrake Menus
+# Mandriva Menus
 install -d %{buildroot}/%{_menudir}
 cat > %{buildroot}%{_menudir}/%{name} <<EOF
 ?package(%{name}): \

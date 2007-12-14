@@ -1,13 +1,12 @@
 Summary:	GTK ASTerisk MANager
 Name:		gastman
 Version:	20050401
-Release:	%mkrel 3
+Release:	%mkrel 4
 Group:		System/Configuration/Networking
-License:	GPL
+License:	GPLv2+
 URL:		http://www.asterisk.org
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		gastman-20040803-mdk.diff
-#Requires:	asterisk
 BuildRequires:	gtk+2-devel
 BuildRequires:	ImageMagick
 BuildRequires:  db-devel
@@ -44,19 +43,6 @@ convert -size 48x48 art/phone2.xpm %{buildroot}%{_liconsdir}/%{name}.png
 convert -size 32x32 art/phone2.xpm %{buildroot}%{_iconsdir}/%{name}.png
 convert -size 16x16 art/phone2.xpm %{buildroot}%{_miconsdir}/%{name}.png
 
-# Mandriva Menus
-install -d %{buildroot}/%{_menudir}
-cat > %{buildroot}%{_menudir}/%{name} <<EOF
-?package(%{name}): \
-command="%{_sbindir}/%{name}" \
-title="GTK ASTerisk MANager" \
-longtitle="%{summary}" \
-needs="x11" \
-icon="%{name}.png" \
-section="System/Configuration/Networking" \
-xdg=true
-EOF
-
 # XDG menu
 install -d %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -67,7 +53,7 @@ Exec=%{_sbindir}/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-System-Configuration-Networking;Settings;Network;
+Categories=Settings;Network;
 EOF
 
 %post
@@ -84,11 +70,8 @@ EOF
 %files
 %defattr(-,root,root,0755)
 %{_sbindir}/*
-%{_datadir}/%{name}/icons
-%{_menudir}/%{name}
+%{_datadir}/%{name}
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_datadir}/applications/*.desktop
-
-

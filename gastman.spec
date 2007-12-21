@@ -12,6 +12,7 @@ BuildRequires:	ImageMagick
 BuildRequires:  db-devel
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 GTK ASTerisk MANager is a administration tool for asterisk.

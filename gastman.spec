@@ -8,7 +8,7 @@ URL:		http://www.asterisk.org
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		gastman-20040803-mdk.diff
 BuildRequires:	gtk+2-devel
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 BuildRequires:  db-devel
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils

@@ -1,11 +1,13 @@
+%define		beta 1
+
 Summary:	GTK ASTerisk MANager
 Name:		gastman
-Version:	20050401
-Release:	%mkrel 6
+Version:	1.0
+Release:	%mkrel 0.%{?beta:RC%{beta}}.1
 Group:		System/Configuration/Networking
 License:	GPLv2+
 URL:		http://www.asterisk.org
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}%{?beta:-RC%{beta}}.tar.gz
 Patch0:		gastman-20040803-mdk.diff
 BuildRequires:	gtk+2-devel
 BuildRequires:	imagemagick
@@ -19,7 +21,7 @@ GTK ASTerisk MANager is a administration tool for asterisk.
 
 %prep
 
-%setup -q
+%setup -q -n %{name}-%{version}%{?beta:-RC%{beta}}
 %patch0 -p0
 
 %build

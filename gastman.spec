@@ -2,6 +2,7 @@
 
 Summary:	GTK ASTerisk MANager
 Name:		gastman
+Epoch:		1
 Version:	1.0
 Release:	%mkrel 0.%{?beta:RC%{beta}}.2
 Group:		System/Configuration/Networking

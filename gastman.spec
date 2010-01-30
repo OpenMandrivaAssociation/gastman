@@ -26,7 +26,7 @@ GTK ASTerisk MANager is a administration tool for asterisk.
 
 %build
 
-%make
+%make CC="gcc %{?ldflags}"
 
 %install
 [ -n "%{buildroot}" -a "%{buildroot}" != / ] && rm -rf %{buildroot}

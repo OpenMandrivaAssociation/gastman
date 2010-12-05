@@ -4,7 +4,7 @@ Summary:	GTK ASTerisk MANager
 Name:		gastman
 Epoch:		1
 Version:	1.0
-Release:	%mkrel 0.%{?beta:RC%{beta}}.2
+Release:	%mkrel 0.%{?beta:RC%{beta}}.3
 Group:		System/Configuration/Networking
 License:	GPLv2+
 URL:		http://www.asterisk.org

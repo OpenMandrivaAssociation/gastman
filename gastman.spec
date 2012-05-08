@@ -10,6 +10,7 @@ License:	GPLv2+
 URL:		http://www.asterisk.org
 Source0:	%{name}-%{version}%{?beta:-RC%{beta}}.tar.gz
 Patch0:		gastman-20040803-mdk.diff
+Patch1:		gastman-1.0-gold.patch
 BuildRequires:	gtk+2-devel
 BuildRequires:	imagemagick
 BuildRequires:  db-devel
@@ -24,10 +25,11 @@ GTK ASTerisk MANager is a administration tool for asterisk.
 
 %setup -q -n %{name}-%{version}%{?beta:-RC%{beta}}
 %patch0 -p0
+%patch1 -p0
 
 %build
 
-%make CC="gcc %{?ldflags} -lm"
+%make CC="gcc %{?ldflags}"
 
 %install
 [ -n "%{buildroot}" -a "%{buildroot}" != / ] && rm -rf %{buildroot}

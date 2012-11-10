@@ -1,0 +1,9 @@
+--- Makefile~	2004-03-30 20:43:54.000000000 +0100
++++ Makefile	2012-05-08 17:25:37.370907545 +0100
+@@ -55,5 +55,5 @@
+ 	rm -f *.o gastman
+ 
+ gastman: $(OBJS)
+-	$(CC) -o gastman $(OBJS) $(GLIBFLAGS) $(LIBS)
++	$(CC) -o gastman $(OBJS) $(GLIBFLAGS) $(LIBS) -lm
+ 

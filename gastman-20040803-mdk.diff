@@ -1,0 +1,11 @@
+--- Makefile	2004-03-30 21:43:54.000000000 +0200
++++ Makefile.oden	2004-11-02 18:04:52.173171012 +0100
+@@ -34,7 +34,7 @@
+ 		echo `glib12-config --cflags`; \
+ 	fi)
+ 
+-CFLAGS=-Wall -g $(GTKFLAGS) $(GLIBFLAGS) -Iinclude -DGTK_ENABLE_BROKEN
++CFLAGS=$(RPM_OPT_FLAGS) -Wall $(GTKFLAGS) $(GLIBFLAGS) -Iinclude -DGTK_ENABLE_BROKEN
+ LIBS=$(GTKLIBS) $(shell if [ -f /etc/master.passwd ]; then echo ""; else echo "-ldb "; fi)
+ LIBS+=$(shell if [ -f /usr/lib/libgdk_pixbuf.so ]; then echo -lgdk_pixbuf ; fi)
+ OBJS=gastman.o gui.o gtklink.o md5.o

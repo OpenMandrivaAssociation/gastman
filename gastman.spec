@@ -84,3 +84,49 @@ EOF
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_datadir}/applications/*.desktop
+
+
+%changelog
+* Tue May 08 2012 Crispin Boylan <crisb@mandriva.org> 1:1.0-0.RC1.5
++ Revision: 797566
+- Rebuild
+
+  + Per Øyvind Karlsen <peroyvind@mandriva.org>
+    - rebuild against db 5.1.25
+
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 1:1.0-0.RC1.3mdv2011.0
++ Revision: 610818
+- rebuild
+
+* Sat Jan 30 2010 Funda Wang <fwang@mandriva.org> 1:1.0-0.RC1.2mdv2010.1
++ Revision: 498559
+- add epoch
+- rebuild
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
+  + Lonyai Gergely <aleph@mandriva.org>
+    - Update: 1.0-RC1
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - lowercase ImageMagick
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 20050401-6mdv2009.0
++ Revision: 245657
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Fri Dec 14 2007 Funda Wang <fwang@mandriva.org> 20050401-4mdv2008.1
++ Revision: 119611
+- drop old menu
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - s/Mandrake/Mandriva/
+

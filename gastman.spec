@@ -7,7 +7,7 @@ Version:	1.0
 Release:	0.%{?beta:RC%{beta}}.5
 Group:		System/Configuration/Networking
 License:	GPLv2+
-URL:		http://www.asterisk.org
+URL:		https://www.asterisk.org
 Source0:	%{name}-%{version}%{?beta:-RC%{beta}}.tar.gz
 Patch0:		gastman-20040803-mdk.diff
 Patch1:		gastman-1.0-gold.patch

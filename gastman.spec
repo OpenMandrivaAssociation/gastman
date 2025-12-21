@@ -11,6 +11,7 @@ URL:		https://www.asterisk.org
 Source0:	%{name}-%{version}%{?beta:-RC%{beta}}.tar.gz
 Patch0:		gastman-20040803-mdk.diff
 Patch1:		gastman-1.0-gold.patch
+BuildRequires:	make
 BuildRequires:	gtk+2-devel
 BuildRequires:	imagemagick
 BuildRequires:  db-devel
